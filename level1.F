@@ -1,12 +1,12 @@
 module level1
   use test_mpi
-  use level2
+#include "level2_uses.inc"
 
   contains
 
   subroutine level1_test()
      write(0,*) ' In level1_test'
-     call level2_test()
+#include "level2_calls.inc"
       call test_global_abort()
   end subroutine level1_test
 
