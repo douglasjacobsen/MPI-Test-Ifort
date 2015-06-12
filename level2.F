@@ -7,6 +7,7 @@ module level2
    subroutine level2_test()
      write(0,*) ' In level2_test'
       call level3_test()
+      call test_global_abort()
    end subroutine level2_test
 
 end module level2
